@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>User Information Settings</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaedf1] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#101418]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_535)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-[#101418] text-lg font-bold leading-tight tracking-[-0.015em]">Invoice API</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#101418] text-sm font-medium leading-normal" href="{{ url_for('home') }}">Dashboard</a>
+              <a class="text-[#101418] text-sm font-medium leading-normal" href="{{ url_for('docs') }}">API Docs</a>
+              <a class="text-[#101418] text-sm font-medium leading-normal" href="{{ url_for('user') }}">User Settings</a>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIZwnxH6MQZHsxuk174ugOkNMaI6qJDlVXsV5gsJVGhos6Bs6ro_VHupjH40LVHQmML2JBxRxwnn89FOBU0fvay-wFhbSL7OKa1OGE711vz5QgCsYtMJSCbKBnC-5e0W27Ffk7dP7CzR6Tnom3oCueWl4FkOi5rfwTM-TFJS-E0xWkTaG9eWHxqzzhNKsl9AwOkDzw5HVZgAB7QZCK6R0tnyRNx2tX1RCVjR8b_Hxrjvvc1wuigRr2JfB-ITS4TQ9h7D7xEoMj_Ss");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#101418] tracking-light text-[32px] font-bold leading-tight">User Information Management</p>
+                <p class="text-[#5c738a] text-sm font-normal leading-normal">Manage user details for the invoice API.</p>
+              </div>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#101418] text-base font-medium leading-normal pb-2">Username</p>
+                <input
+                  placeholder="Enter username (max 50 chars)"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#101418] focus:outline-0 focus:ring-0 border border-[#d4dbe2] bg-gray-50 focus:border-[#d4dbe2] h-14 placeholder:text-[#5c738a] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <p class="text-[#5c738a] text-sm font-normal leading-normal pb-3 pt-1 px-4">Username is required and must be unique.</p>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#101418] text-base font-medium leading-normal pb-2">Company Name</p>
+                <input
+                  placeholder="Enter company name (max 100 chars)"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#101418] focus:outline-0 focus:ring-0 border border-[#d4dbe2] bg-gray-50 focus:border-[#d4dbe2] h-14 placeholder:text-[#5c738a] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <p class="text-[#5c738a] text-sm font-normal leading-normal pb-3 pt-1 px-4">Company name is required.</p>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#101418] text-base font-medium leading-normal pb-2">Email</p>
+                <input
+                  placeholder="Enter user email (max 100 chars)"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#101418] focus:outline-0 focus:ring-0 border border-[#d4dbe2] bg-gray-50 focus:border-[#d4dbe2] h-14 placeholder:text-[#5c738a] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <p class="text-[#5c738a] text-sm font-normal leading-normal pb-3 pt-1 px-4">Please enter a valid and unique email address.</p>
+            <div class="flex justify-stretch">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-end">
+                <button
+                  id="cancel-btn"
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#eaedf1] text-[#101418] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Cancel</span>
+                </button>
+                <button
+                  id="save-btn"
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3f7fbf] text-gray-50 text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Update Credentials</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-red-600 text-gray-50 text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Delete User</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+  const userId = localStorage.getItem("user_id"); // adjust as needed
+  const apiUrl = "http://localhost:5000"; // change if hosted elsewhere
+
+  async function loadUserInfo() {
+    try {
+      const response = await fetch(`${apiUrl}/show_user/${userId}`);
+      const data = await response.json();
+      if (response.ok) {
+        document.querySelector('input[placeholder*="username"]').value = data.username;
+        document.querySelector('input[placeholder*="company name"]').value = data.company_name;
+        document.querySelector('input[placeholder*="email"]').value = data.email;
+      } else {
+        alert(data.error || "Failed to load user info.");
+      }
+    } catch (error) {
+      console.error("Error loading user info:", error);
+    }
+  }
+
+  async function updateUserInfo() {
+    const username = document.querySelector('input[placeholder*="username"]').value;
+    const companyName = document.querySelector('input[placeholder*="company name"]').value;
+    const email = document.querySelector('input[placeholder*="email"]').value;
+
+    const payload = {
+      username: username.trim(),
+      company_name: companyName.trim(),
+      email: email.trim()
+    };
+
+    try {
+      const response = await fetch(`${apiUrl}/update_user/${userId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        alert("User updated successfully.");
+      } else {
+        alert(data.error || "Update failed.");
+      }
+    } catch (error) {
+      console.error("Error updating user:", error);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadUserInfo);
+
+  document.querySelector("button span:contains('Save')")?.parentElement?.addEventListener("click", updateUserInfo);
+
+  document.getElementById("save-btn").addEventListener("click", updateUserInfo);
+
+</script>
+<script>
+  document.getElementById("cancel-btn").addEventListener("click", () => {
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => input.value = '');
+  });
+</script>
+
+  </body>
+</html>

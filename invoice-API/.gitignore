@@ -1,0 +1,69 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+.ENV/
+
+# VSCode / IDE config
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Flask specific
+instance/
+*.db
+*.sqlite3
+*.log
+*.pid
+*.pyc
+
+# Flask env files
+.env
+.env.*
+
+# Uploads or generated content
+uploads/
+invoices/
+logos/
+*.pdf
+
+# Pytest / Coverage
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.cache/
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# MyPy / Pyright / other linting
+.mypy_cache/
+.pyright/
+.dmypy.json
+.pyre/
+
+# Logs
+*.log
+
+# Jupyter notebooks (optional)
+.ipynb_checkpoints/

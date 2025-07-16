@@ -1,0 +1,236 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Sign In</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden"
+      style="--checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(249,250,251)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e'); font-family: Inter, &quot;Noto Sans&quot;, sans-serif;"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaedf1] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#101418]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_535)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-[#101418] text-lg font-bold leading-tight tracking-[-0.015em]">Invoice API</h2>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
+            <h2 class="text-[#101418] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Welcome back</h2>
+            <div class="pb-3">
+              <div class="flex border-b border-[#d4dbe2] px-4 gap-8">
+                <a id="tab-signin" class="flex flex-col items-center justify-center border-b-[3px] border-b-[#3f7fbf] text-[#101418] pb-[13px] pt-4" href="#">
+                  <p class="text-[#101418] text-sm font-bold leading-normal tracking-[0.015em]">Sign In</p>
+                </a>
+                <a id="tab-signup" class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#5c738a] pb-[13px] pt-4" href="#">
+                  <p class="text-[#5c738a] text-sm font-bold leading-normal tracking-[0.015em]">Sign Up</p>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Sign In Form -->
+            <div id="signin-form">
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#101418] text-base font-medium leading-normal pb-2">Email</p>
+                  <input
+                    placeholder="Enter your email"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#101418] focus:outline-0 focus:ring-0 border border-[#d4dbe2] bg-gray-50 focus:border-[#d4dbe2] h-14 placeholder:text-[#5c738a] p-[15px] text-base font-normal leading-normal"
+                    value=""
+                  />
+                </label>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#101418] text-base font-medium leading-normal pb-2">Password</p>
+                  <input
+                    placeholder="Enter your password"
+                    type="password"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#101418] focus:outline-0 focus:ring-0 border border-[#d4dbe2] bg-gray-50 focus:border-[#d4dbe2] h-14 placeholder:text-[#5c738a] p-[15px] text-base font-normal leading-normal"
+                    value=""
+                  />
+                </label>
+              </div>
+              <div class="flex items-center gap-4 bg-gray-50 px-4 min-h-14 justify-between">
+                <p class="text-[#101418] text-base font-normal leading-normal flex-1 truncate">Remember me</p>
+                <div class="shrink-0">
+                  <div class="flex size-7 items-center justify-center">
+                    <input
+                      type="checkbox"
+                      class="h-5 w-5 rounded border-[#d4dbe2] border-2 bg-transparent text-[#3f7fbf] checked:bg-[#3f7fbf] checked:border-[#3f7fbf] checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-[#d4dbe2] focus:outline-none"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p class="text-[#5c738a] text-sm font-normal leading-normal pb-3 pt-1 px-4 underline">Forgot password?</p>
+              <div class="flex px-4 py-3">
+                <button
+                  onclick="handleLogin(event)"
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-[#3f7fbf] text-gray-50 text-base font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Sign In</span>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Sign Up Form (initially hidden) -->
+            <div id="signup-form" class="hidden">
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#101418] text-base font-medium pb-2">Username</p>
+                  <input placeholder="Enter your username" class="form-input h-14 p-[15px] rounded-xl border border-[#d4dbe2]" />
+                </label>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#101418] text-base font-medium pb-2">Company Name</p>
+                  <input placeholder="Enter your company name" class="form-input h-14 p-[15px] rounded-xl border border-[#d4dbe2]" />
+                </label>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#101418] text-base font-medium pb-2">Email</p>
+                  <input placeholder="Enter your email" class="form-input h-14 p-[15px] rounded-xl border border-[#d4dbe2]" />
+                </label>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#101418] text-base font-medium pb-2">Password</p>
+                  <input placeholder="Enter your password" type="password" class="form-input h-14 p-[15px] rounded-xl border border-[#d4dbe2]" />
+                </label>
+              </div>
+              <div class="flex px-4 py-3">
+                <button
+                  onclick="handleSignup(event)"
+                  class="flex items-center justify-center h-12 px-5 flex-1 bg-[#3f7fbf] text-white rounded-xl font-bold"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Toggle between Sign In and Sign Up
+      const signinTab = document.getElementById("tab-signin");
+      const signupTab = document.getElementById("tab-signup");
+      const signinForm = document.getElementById("signin-form");
+      const signupForm = document.getElementById("signup-form");
+
+      signinTab.addEventListener("click", (e) => {
+        e.preventDefault();
+        signinTab.classList.add("border-b-[#3f7fbf]", "text-[#101418]");
+        signinTab.classList.remove("text-[#5c738a]");
+        signupTab.classList.remove("border-b-[#3f7fbf]", "text-[#101418]");
+        signupTab.classList.add("text-[#5c738a]");
+        signinForm.classList.remove("hidden");
+        signupForm.classList.add("hidden");
+      });
+
+      signupTab.addEventListener("click", (e) => {
+        e.preventDefault();
+        signupTab.classList.add("border-b-[#3f7fbf]", "text-[#101418]");
+        signupTab.classList.remove("text-[#5c738a]");
+        signinTab.classList.remove("border-b-[#3f7fbf]", "text-[#101418]");
+        signinTab.classList.add("text-[#5c738a]");
+        signupForm.classList.remove("hidden");
+        signinForm.classList.add("hidden");
+      });
+
+      // Sign In logic
+      async function handleLogin(event) {
+  event.preventDefault();
+
+  const email = document.querySelector('#signin-form input[placeholder="Enter your email"]').value;
+  const password = document.querySelector('#signin-form input[placeholder="Enter your password"]').value;
+
+  try {
+    const res = await fetch('/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+      credentials: 'include'  // Required for session cookies
+    });
+
+    const result = await res.json();
+
+    if (res.ok) {
+      // Store credentials if "Remember me" is checked
+      const rememberMe = document.querySelector('#signin-form input[type="checkbox"]').checked;
+      if (rememberMe) {
+        localStorage.setItem('invoice_api_email', email);
+        localStorage.setItem('invoice_api_password', password);
+      }
+      
+      // Redirect to dashboard
+      window.location.href = '/';
+    } else {
+      alert(result.error || 'Login failed');
+    }
+  } catch (error) {
+    alert('Failed to sign in');
+    console.error(error);
+  }
+}
+
+      // Sign Up logic
+      async function handleSignup(event) {
+        event.preventDefault();
+
+        const username = document.querySelector('#signup-form input[placeholder="Enter your username"]').value;
+        const company = document.querySelector('#signup-form input[placeholder="Enter your company name"]').value;
+        const email = document.querySelector('#signup-form input[placeholder="Enter your email"]').value;
+        const password = document.querySelector('#signup-form input[placeholder="Enter your password"]').value;
+
+        try {
+          const res = await fetch("http://localhost:5000/new_user", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, company_name: company, email, password })
+          });
+
+          const result = await res.json();
+
+          if (res.ok) {
+            alert("Account created successfully. Copy your API Key: " + result.api_key);
+            // Switch to sign in tab after successful signup
+            signinTab.click();
+          } else {
+            alert(result.error || "Sign up failed");
+          }
+        } catch (error) {
+          alert("Failed to sign up");
+          console.error(error);
+        }
+      }
+    </script>
+  </body>
+</html>

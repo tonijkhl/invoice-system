@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Orders</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f3f3] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#131615]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-[#131615] text-lg font-bold leading-tight tracking-[-0.015em]">HealthPlus</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#111815] text-sm font-medium leading-normal" href="{{ url_for('clients') }}">Clients</a>
+              <a class="text-[#111815] text-sm font-medium leading-normal" href="{{ url_for('products') }}">Products</a>
+              <a class="text-[#111815] text-sm font-medium leading-normal" href="{{ url_for('orders') }}">Orders</a>
+            </div>
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                <div
+                  class="text-[#6b8078] flex border-none bg-[#f1f3f3] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#131615] focus:outline-0 focus:ring-0 border-none bg-[#f1f3f3] focus:border-none h-full placeholder:text-[#6b8078] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#f1f3f3] text-[#131615] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-[#131615]" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQYoM9sq5pGisfroHAuyDqHvlguPe1VsU2RzQDVaN6I_iBqhiNT-RNIQaPWDjm6hYCm4hvOaTsNLLG2_EelBMO4WGS5S7IfwFh7f8c-b7ybc_RunKgAV2FRBJ5s78a2k4YuXnX8W7YP6IHnd7l19ZaOYjR07HqR52BKq8q98X4y1-ry4YLs5O3qtIECyHrgY0tWtt1e-X21c9rohoMLIZ17bkdt-iYG5PmTF8v2dXACeWiOqPbpZOyJygPsOyzJZ4FdZ9h0TyTKuAA");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-[#131615] tracking-light text-[32px] font-bold leading-tight min-w-72">Orders</p>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f1f3f3] text-[#131615] text-sm font-medium leading-normal"
+              >
+                <span class="truncate">New Order</span>
+              </button>
+            </div>
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                  <div
+                    class="text-[#6b8078] flex border-none bg-[#f1f3f3] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Search orders"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#131615] focus:outline-0 focus:ring-0 border-none bg-[#f1f3f3] focus:border-none h-full placeholder:text-[#6b8078] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-xl border border-[#dee3e1] bg-white">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-white">
+                      <th class="px-4 py-3 text-left text-[#131615] text-sm font-medium leading-normal">Invoice ID</th>
+                      <th class="px-4 py-3 text-left text-[#131615] text-sm font-medium leading-normal">Customer Name</th>
+                      <th class="px-4 py-3 text-left text-[#131615] text-sm font-medium leading-normal">Invoice Number</th>
+                      <th class="px-4 py-3 text-left text-[#131615] text-sm font-medium leading-normal">Invoice Date</th>
+                      <th class="px-4 py-3 text-left text-[#131615] text-sm font-medium leading-normal">Total Amount</th>
+                      <th class="px-4 py-3 text-left text-[#131615] text-sm font-medium leading-normal">Payment Status</th>
+                      <th class="px-4 py-3 text-left text-[#131615] text-sm font-medium leading-normal">Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {% for order in orders %}
+                    <tr class="border-t border-t-[#dee3e1]">
+                      <td class="h-[72px] px-4 py-2 text-[#131615] text-sm font-normal leading-normal">{{ order[0] }}</td> <!-- invoice_id -->
+                      <td class="h-[72px] px-4 py-2 text-[#6b8078] text-sm font-normal leading-normal">{{ order[3] }}</td> <!-- customer_name -->
+                      <td class="h-[72px] px-4 py-2 text-[#6b8078] text-sm font-normal leading-normal">{{ order[1] }}</td> <!-- invoice_number -->
+                      <td class="h-[72px] px-4 py-2 text-[#6b8078] text-sm font-normal leading-normal">{{ order[2] }}</td> <!-- invoice_date -->
+                      <td class="h-[72px] px-4 py-2 text-[#6b8078] text-sm font-normal leading-normal">${{ "%.2f"|format(order[4]) }}</td> <!-- total_amount -->
+                      <td class="h-[72px] px-4 py-2 text-[#6b8078] text-sm font-normal leading-normal">{{ order[5] }}</td> <!-- payment_status -->
+                      <td class="h-[72px] px-4 py-2 text-sm font-normal leading-normal">
+                        <button
+                          class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded"
+                          onclick='generateInvoice({ client_name: "{{ order[3] }}", invoice_id: "{{ order[0] }}" })'
+                        >
+                          Generate Invoice
+                        </button>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-95e33534-de6c-454a-90de-e71119440c20-column-120{display: none;}}
+                @container(max-width:240px){.table-95e33534-de6c-454a-90de-e71119440c20-column-240{display: none;}}
+                @container(max-width:360px){.table-95e33534-de6c-454a-90de-e71119440c20-column-360{display: none;}}
+                @container(max-width:480px){.table-95e33534-de6c-454a-90de-e71119440c20-column-480{display: none;}}
+                @container(max-width:600px){.table-95e33534-de6c-454a-90de-e71119440c20-column-600{display: none;}}
+                @container(max-width:720px){.table-95e33534-de6c-454a-90de-e71119440c20-column-720{display: none;}}
+                @container(max-width:840px){.table-95e33534-de6c-454a-90de-e71119440c20-column-840{display: none;}}
+                @container(max-width:960px){.table-95e33534-de6c-454a-90de-e71119440c20-column-960{display: none;}}
+                @container(max-width:1080px){.table-95e33534-de6c-454a-90de-e71119440c20-column-1080{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  async function generateInvoice({ client_name, invoice_id }) {
+    try {
+      // 1. Fetch invoice items
+      const itemsResponse = await fetch(`/get_invoice_items/${invoice_id}`);
+      if (!itemsResponse.ok) throw new Error("Failed to fetch invoice items");
+      const items = await itemsResponse.json();
+
+      // 2. Fetch client info
+      const clientResponse = await fetch(`/get_client_info/${invoice_id}`);
+      if (!clientResponse.ok) throw new Error("Failed to fetch client info");
+      const clientData = await clientResponse.json();
+
+      // 3. Construct the invoice payload
+      const payload = {
+        logo: "https://png.pngtree.com/template/20190512/ourmid/pngtree-medical-cross-and-health-pharmacy-logo-vector-template-image_148831.jpg",
+        business_name: "Pharma HealthPlus",
+        business_address: "123 Business St, Doral, FL 132455",
+        business_phone: "(123) 456-7890",
+        business_email: "billing@healthp.com",
+        client_name: clientData.client_name,
+        client_address: clientData.client_address,
+        client_phone: clientData.client_phone,
+        client_email: clientData.client_email,
+        items: items,
+        tax_rate: 10,
+        payment_terms: "Net 30 days"
+      };
+
+      // 4. Send request to generate invoice PDF
+      const response = await fetch('http://localhost:5000/generate_invoice', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-API-KEY': 'WGwbDVfcKP7PFURE1x1G4EdSZ4c8Useby6f5KOSoXko'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) throw new Error("Failed to generate invoice");
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${clientData.client_name.replace(/\s+/g, '_')}_invoice_${invoice_id}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+    } catch (err) {
+      console.error(err);
+      alert("Could not generate invoice.");
+    }
+  }
+</script>
+
+
+  </body>
+</html>

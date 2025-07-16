@@ -1,0 +1,9 @@
+services:
+  queue-invoice:
+    image: rabbitmq:3.8-management-alpine
+    ports:
+      - 5672:5672   # AMQP protocol port
+      - 15672:15672 # Management UI port
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
